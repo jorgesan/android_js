@@ -26,6 +26,14 @@
             android:name="com.newteam.taskdown.LoginActivity"
             android:label="@string/title_activity_login" >
         </activity>
+        <activity
+            android:name="com.newteam.taskdown.RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:parentActivityName="com.newteam.taskdown.LoginActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.newteam.taskdown.LoginActivity" />
+        </activity>
     </application>
 
 </manifest>
