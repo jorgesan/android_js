@@ -18,7 +18,7 @@
              android:text="@string/login" 
              android:onClick="onClickValidateUser"/>
          
-         <TextView android:id="@+id/link_to_register"
+         <TextView android:id="@+id/lnkRegister"
                   android:layout_width="fill_parent"
                   android:layout_height="wrap_content"
                   android:layout_marginTop="40dip"
@@ -26,7 +26,9 @@
                   android:text="@string/register"
                   android:gravity="center"
                   android:textSize="20dip"
-                  android:textColor="#0b84aa"/>
+                  android:textColor="#0b84aa"
+                  android:clickable="true"
+                  android:onClick="onClickRegisterUser"/>
          
          <TextView android:id="@+id/login_error"
                   android:layout_width="fill_parent"

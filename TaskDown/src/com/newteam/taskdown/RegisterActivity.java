@@ -2,8 +2,11 @@ package com.newteam.taskdown;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.support.v4.app.NavUtils;
 
 public class RegisterActivity extends Activity {
@@ -48,5 +51,25 @@ public class RegisterActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+	public void onClickRegisterUser(View view)	{
+        TextView userName = (TextView)findViewById(R.id.txtUserName);
+        TextView email = (TextView)findViewById(R.id.txtEmail);
+        TextView password = (TextView)findViewById(R.id.txtPass);
+		boolean registerUser = registerUser(userName.getText().toString(), password.getText().toString(), email.getText().toString());
 
+		
+	}
+
+	private boolean registerUser(String name, String passwd, String email) {
+		if(name.equals("1") && passwd.equals("1") && email.equals("1"))	{
+        	AlertDialog errorDialog = new AlertDialog.Builder(this).create();
+            errorDialog.setMessage(this.getString(R.string.register_error));
+            errorDialog.show();	
+			return false;
+		}
+		else{
+			return true;
+		}
+	}
 }

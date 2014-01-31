@@ -4,5 +4,12 @@
     <string name="app_name">TaskDown</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="login">Entrar</string>
+    <string name="register">Registrarse</string>
+    <string name="login_error">Usuario no registrado</string>
+    <string name="register_error">Usuario ya registrado</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="save">Guardar</string>
 
 </resources>
