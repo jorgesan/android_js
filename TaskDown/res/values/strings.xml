@@ -11,5 +11,9 @@
     <string name="register_error">Usuario ya registrado</string>
     <string name="title_activity_register">RegisterActivity</string>
     <string name="save">Guardar</string>
-
+    <string name="title_activity_task">Tareas</string>
+    <string name="search">Buscar</string>
+    <string name="settings">Ajustes</string>
+    <string name="add">Añadir</string>
+	<string name="tasks">Tareas</string>    
 </resources>

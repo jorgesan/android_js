@@ -21,15 +21,15 @@ public class LoginActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
+		
 	} 
   
 	public void onClickValidateUser(View v) {
         TextView usuario = (TextView)findViewById(R.id.txtEmail);
         TextView password = (TextView)findViewById(R.id.txtPass);
         if(validateUser(usuario.getText().toString(),password.getText().toString()))	{
-        	AlertDialog errorDialog = new AlertDialog.Builder(this).create();
-            errorDialog.setMessage("Usuario Correcto");
-            errorDialog.show();
+	   		 Intent intent = new Intent(this, TaskActivity.class);
+	         startActivity(intent);
         }
         else	{
         	AlertDialog errorDialog = new AlertDialog.Builder(this).create();
