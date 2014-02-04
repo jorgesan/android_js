@@ -22,21 +22,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
+        <!-- <activity
             android:name="com.newteam.taskdown.LoginActivity"
             android:label="@string/title_activity_login" >
-        </activity>
+        </activity>-->
         <activity
             android:name="com.newteam.taskdown.RegisterActivity"
-            android:label="@string/title_activity_register"
-            android:parentActivityName="com.newteam.taskdown.LoginActivity" >
+            android:label="@string/title_activity_register">            
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.newteam.taskdown.LoginActivity" />
-        </activity>
-        <activity
-            android:name="com.newteam.taskdown.TaskActivity"
-            android:label="@string/title_activity_task" >
         </activity>
     </application>
 

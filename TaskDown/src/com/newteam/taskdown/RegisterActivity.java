@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.support.v4.app.NavUtils;
 
-public class RegisterActivity extends Activity {
+public class RegisterActivity  extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
