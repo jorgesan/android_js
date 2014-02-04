@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.newteam.taskdown</groupId>
+	<artifactId>taskdown</artifactId>
+	<version>1.0.0</version>
+	<packaging>apk</packaging>
+	<name>TaskDown</name>
+  <dependencies>
+          <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+			<version>4.1.1.4</version>
+			<scope>provided</scope>
+          </dependency>
+<!-- Android Support Libraries -->
+<dependency>
+  <groupId>uk.co.icatalyst</groupId>
+  <artifactId>android-support-v4</artifactId>
+  <version>18</version>
+  <scope>compile</scope>
+</dependency>
+                      
+  </dependencies>
+  <build>
+        <finalName>MavenTest</finalName>
+        <sourceDirectory>src</sourceDirectory>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                    <artifactId>android-maven-plugin</artifactId>
+                    <version>3.8.2</version>
+                    <extensions>true</extensions>
+                </plugin>
+                <!--This plugin's configuration is used to store Eclipse m2e settings 
+                    only. It has no influence on the Maven build itself. -->
+                <plugin>
+                    <groupId>org.eclipse.m2e</groupId>
+                    <artifactId>lifecycle-mapping</artifactId>
+                    <version>1.0.0</version>
+                    <configuration>
+                        <lifecycleMappingMetadata>
+                            <pluginExecutions>
+                                <pluginExecution>
+                                    <pluginExecutionFilter>
+                                        <groupId>
+                                            com.jayway.maven.plugins.android.generation2
+                                        </groupId>
+                                        <artifactId>
+                                            android-maven-plugin
+                                        </artifactId>
+                                        <versionRange>
+                                            [3.1.1,)
+                                        </versionRange>
+                                        <goals>
+                                            <goal>proguard</goal>
+                                            <goal>consume-aar</goal>
+                                        </goals>
+                                    </pluginExecutionFilter>
+                                    <action>
+                                        <ignore></ignore>
+                                    </action>
+                                </pluginExecution>
+                            </pluginExecutions>
+                        </lifecycleMappingMetadata>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                <artifactId>android-maven-plugin</artifactId>
+                <configuration>
+                    <sdk>
+                        <path>${env.ANDROID_HOME}</path>
+                        <platform>15</platform>
+                    </sdk>
+                </configuration>
+                <extensions>true</extensions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
